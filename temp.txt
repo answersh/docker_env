@@ -1,9 +1,0 @@
-TypeError: 'str' object cannot be interpreted as an integer
-Traceback:
-
-File "/app/dashboard_frequent_franchisee.py", line 102, in <module>
-    st.dataframe(styled_pivot, width='stretch', height=210)
-File "/opt/conda/envs/analyst_env/lib/python3.9/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
-    result = non_optional_func(*args, **kwargs)
-File "/opt/conda/envs/analyst_env/lib/python3.9/site-packages/streamlit/elements/arrow.py", line 588, in dataframe
-    proto.width = width
