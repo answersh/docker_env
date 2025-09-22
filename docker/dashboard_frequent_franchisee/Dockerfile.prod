@@ -1,0 +1,8 @@
+FROM python:3.9-slim
+WORKDIR /app
+COPY ./docker/dashboard_frequent_franchisee/requirements.prod.txt .
+RUN apt-get update && apt-get install -y gcc libmariadb-dev && rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir -r requirements.prod.txt
+COPY ./src .
+EXPOSE 8501
+CMD ["streamlit", "run", "dashboard_frequent_franchisee.py", "--server.address=0.0.0.0"]

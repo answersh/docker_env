@@ -1,0 +1,7 @@
+FROM continuumio/miniconda3
+COPY ./docker/analyst_workspace/environment.yml .
+RUN conda config --set ssl_verify false
+RUN conda env create -f environment.yml
+WORKDIR /app
+EXPOSE 8888
+CMD ["conda", "run", "-n", "analyst_env", "jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser", "--NotebookApp.token="]

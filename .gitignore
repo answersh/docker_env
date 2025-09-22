@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Docker
+# (특별히 제외할 것 없음)
+
+# IDE
+.vscode/
+.idea/

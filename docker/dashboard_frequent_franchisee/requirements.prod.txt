@@ -1,0 +1,7 @@
+streamlit
+pandas
+prophet
+plotly
+pymysql
+mariadb
+python-dotenv

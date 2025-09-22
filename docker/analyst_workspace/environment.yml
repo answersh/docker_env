@@ -1,0 +1,17 @@
+name: analyst_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - jupyterlab
+  - streamlit
+  - pandas
+  - prophet
+  - plotly
+  - pymysql
+  - mariadb
+  - python-dotenv
+  - pip
+  - pip:
+    - xlsxwriter
