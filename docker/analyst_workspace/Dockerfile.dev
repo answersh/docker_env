@@ -1,7 +1,16 @@
 FROM continuumio/miniconda3
+# wget설치
+RUN apt-get update && apt-get install -y wget
+# wget SSL인증서 비활성화 설정
+COPY docker/analyst_workspace/.wgetrc /root/.wgetrc
 COPY ./docker/analyst_workspace/environment.yml .
 RUN conda config --set ssl_verify false
 RUN conda env create -f environment.yml
+
+# jupyter lab dark mode setting
+RUN mkdir -p /root/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/ && \
+    echo '{"theme": "JupyterLab Dark"}' > /root/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
+
 WORKDIR /app
 EXPOSE 8888
 CMD ["conda", "run", "-n", "analyst_env", "jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser", "--NotebookApp.token="]

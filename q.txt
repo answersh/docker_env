@@ -1,0 +1,15 @@
+# pwd
+/app
+# ls -al
+total 20
+drwxrwxrwx 1 root root 4096 Sep 24 05:43 .
+drwxr-xr-x 1 root root 4096 Sep 24 05:50 ..
+drwx------ 1 root root 4096 Sep 22 05:50 .Trash-0
+drwxr-xr-x 1 root root 4096 Sep 24 05:37 .ipynb_checkpoints
+-rwxrwxrwx 1 root root 9467 Sep 24 05:43 dashboard.py
+-rwxrwxrwx 1 root root 3629 Sep 22 06:11 dashboard_frequent_franchisee.py
+drwxrwxrwx 1 root root 4096 Sep 22 04:44 data
+drwxrwxrwx 1 root root 4096 Sep 22 04:44 db
+# streamlit run dashboard.py
+/usr/bin/sh: 13: streamlit: not found
+# 

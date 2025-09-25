@@ -25,7 +25,7 @@ services:
       context: . # context를 프로젝트 루트로 변경
       dockerfile: ./docker/dashboard_frequent_franchisee/Dockerfile.prod
     ports:
-      - "8502:8501" # 개발용과 다른 포트 사용
+      - "8502:8501" # 개발용과 다른 포트 사용(8502)
     env_file:
       - .env
     volumes:
